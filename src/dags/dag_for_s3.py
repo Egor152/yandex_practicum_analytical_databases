@@ -38,7 +38,7 @@ def sprint6_project_dag_get_data():
         PythonOperator(
             task_id=f'fetch_{key}', #Форирование задачи в airflow
             python_callable=fetch_s3_file,
-            op_kwargs={'bucket': 'sprint6', 'key': key},
+            op_kwargs={'bucket': 'Скрыл по просьбе Яндекс Практикума', 'key': key},
         ) for key in bucket_files
     ]
     #Задача, которая выводит 10 первых строк в csv-файлах
